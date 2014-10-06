@@ -10,7 +10,7 @@ sed -i '/[2-6]:23:respawn:\/sbin\/getty 38400 tty[2-6]/s%^%#%g' /etc/inittab
 sed -i '/T0:23:respawn:\/sbin\/getty -L ttyAMA0 115200 vt100/s%^%#%g' /etc/inittab
 
 #Replace Bash shell with Dash shell | Save: +1 MB RAM
-dpkg-reconfigure dash
+#dpkg-reconfigure dash #this option really sucks for bash scripting
 
 #Enable a 512MB swapfile
 echo "CONF_SWAPSIZE=512" > /etc/dphys-swapfile
